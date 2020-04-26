@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title></title>
+ <style>
+  *{margin: 0; padding: 0; box-sizing: border-box;}
+  section{ width: 100%; background: cyan;
+}
+
+  section div{
+   /*width: 30%;*/
+   flex-basis: 30%;
+   padding: 20px;
+   border:1px solid black;
+
+  }
+
+  .flexone{
+   /*flex:1;*/
+   background: red;
+  }
+
+  .flextwo{
+   /*flex:2;*/
+   background: yellow;}
+
+  .flexthree{
+   /*flex:2;*/
+   background: green;}
+
+  @media(min-width: 768px){
+   section{
+    display: flex;
+    justify-content: space-between;
+
+   }
+  }
+
+ </style>
+</head>
+<body>
+
+<section>
+
+ <div class="flexone"> DONATION FOR SUPPORT:    PhonePay = vinodbahadur@ybl      GooglePay: vbthapa55@oksbi
+ Believe me all this money will be used to make more quality videos and to make my channel grow. So that I can always provide you awesome free videos :) </div>
+
+ <div class="flextwo"> Lorems ipsum dolor sit amet, </div>
+
+ <div class="flexthree"> Three  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua. </div>
+</section>
+
+</body>
+</html>
+
+
+Flex Wrap
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container {
+  display: flex;
+  /*flex-wrap: wrap;*/
+  flex-wrap: wrap;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+<h1>The flex-wrap Property</h1>
+
+<p>The "flex-wrap: wrap;" specifies that the flex items will wrap if necessary:</p>
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>
+</div>
+
+<p>Try resizing the browser window.</p>
+
+</body>
+</html>

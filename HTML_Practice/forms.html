@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>This is the example of a form.</title>
+  </head>
+  <body>
+
+  <!-- Simple form where the field shows in the same line without any lebel.
+  action attribute contains a page which is to be opened when Submit button is pressed. -->
+
+    <form class="form1" action="basics.html" method="get">
+      <h1> This is form1 -All fields in single line</h1>
+      <input type="text" name="Nationality" value="Indian">
+      <input type="First_name" name="" value="">
+      <input type="Last_name" name="" value="">
+      <input type="email" name="" value="">
+      <input type="password" name="" value="">
+      <input type="color" name="" value="">
+      <input type="submit" name="" value="Click Me">
+
+    </form>
+
+    <!-- Simple form where the field shows in different line without any lebel.
+    Label given manually by p tag. -->
+
+    <form class="form2" action="basics.html" method="get">
+
+      <h1> This is form2 -multiline input fields </h1>
+      <p>Natinality:  <input type="text" name="Nationality" value="Indian"></p>
+      <p>First_name:<input type="First_name" name="" value=""></p>
+      <p>Last_name:   <input type="Last_name" name="" value=""></p>
+      <p>Email:       <input type="email" name="" value=""></p>
+      <p>Password:    <input type="password" name="" value=""></p>
+      <p>        <input type="submit" name="" value="Click Me"></p>
+
+    </form>
+
+
+
+    <!-- Simple form where the field shows in different lines using label.
+    Label helps to uniquely give proportied to that label only in css -->
+
+    <form class="form2" action="basics.html" method="get">
+<!-- The value of "for" tag used in the label and id of the input tag must be same
+to bind the label with the input. this can be used in defining other proporties later -->
+      <h1> This is form3 -use of label</h1>
+      <label for="fn">First_name:</label>
+      <input id="fn" type="First_name" name="" placeholder="First name"><br><br>
+      <label for="ln">Last_name:</label>
+      <input id="ln" type="Last_name" name="" placeholder="Last name"><br><br>
+      <label for="Nat">Nationality:</label>
+      <input id="Nat" type="text" name="" value="Indian"><br><br>
+      <label for="eml">Email id:&nbsp&nbsp&nbsp&nbsp </label>
+      <input id ="eml" type="email" name="" placeholder="xyz@abc.com"><br><br>
+      <label for="pwd">Password:&nbsp&nbsp</label>
+      <input id="pwd" type="password" name="" placeholder="**********"><br>
+      <!-- Below using radio button, drop down list, check box and text area. -->
+      <p>Marital Status:&nbsp&nbsp&nbsp&nbsp
+        <label for="rad1">Married</label>
+        <input id="rad1" type="radio" name="marrital_state">
+        <label for="rad2">Single</label>
+        <input id="rad2" type="radio" name="marrital_state">
+      </p>
+      <label for="edu">Education:</label>
+      <select id ="edu" class="sel1" name="education">
+        <option value="M">Master's</option>
+        <option value="B">Bachelor's</option>
+        <option value="12">12th</option>
+        <option value="10">10th</option>
+      </select><br><br>
+      <p>Your hobby:</p>
+
+      <input id="hopbby1" type="checkbox" name="hopbby1" value="icecream">
+      <label for="hopbby1">Eating icecream:</label><br>
+      <input id="hopbby2" type="checkbox" name="hobby2" value="news">
+      <label for="hopbby2">Studying News Paper:</label><br>
+      <input id="hopbby3" type="checkbox" name="hopbby3" value="cooking">
+      <label for="hopbby3">cooking:</label><br>
+      <input id="hopbby4" type="checkbox" name="hobby4" value="diving">
+      <label for="hopbby4">sky diving:</label><br><br>
+
+      <label for="feed">Any other feedback:&nbsp</label><br>
+      <textarea id="feed" name="feedback" rows="8" cols="80"></textarea>
+
+
+      <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" name="" value="Click Me"></p><br>
+
+
+    </form>
+
+
+  </body>
+</html>
+/

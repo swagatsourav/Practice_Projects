@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Demo of CSS</title>
+    <link rel="stylesheet" href="others.css">
+  </head>
+  <body>
+    <h1>I am outside the div.</h1>
+    <div>
+
+
+      <p>I am inside the div</p>
+      <p>I am <span>inside span</span></p>
+
+    </div>
+
+
+<!-- The style for the section inside id has highest priority.
+then comes the div part
+then the general element part
+It can observerd that the more atomic section the style is being applied
+the more priority it gets than it's parents. -->
+
+  <div class="div1">
+
+    <p id="p1">This paragraph has an id</p>
+    <ul>
+      <li>Please enter your age: <input type="text" name="age" placeholder="age"></li>
+      <li>What is your education: <select class="sel1" name="education">
+        <option value="Masters">M.tech</option>
+        <option value="Bach">B.Tech</option>
+        <option value="Bach">Bach</option>
+      </select> </li>
+      <input type="submit" name="Submit" value="Submit" style="margin: 25px 0px 5px 80px">
+
+
+    </ul>
+      <p>Below is the Ordered list the div1</p>
+    <ol>
+      <li>This is line 1</li>
+      <li>This is line 2</li>
+      <li>This is line 3</li>
+      <li>This is line 4</li>
+    </ol>
+  <p>You have successfully filled till here.</p>
+  <p>End of the list.</p>
+  <a href="www.google.com">Visit Google</a>
+  <a href="www.facebook.com">Visit Facebook</a>
+
+  </div>
+
+  <p>Below is the Ordered list outside the div1</p>
+<ol>
+  <li>This is line 1</li>
+  <li>This is line 2</li>
+  <li>This is line 3</li>
+  <li>This is line 4</li>
+</ol>
+
+  </body>
+</html>
+
+<a href="#">Visit Google</a>

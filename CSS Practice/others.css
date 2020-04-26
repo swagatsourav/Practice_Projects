@@ -1,0 +1,87 @@
+body{
+
+  background: url("https://wallpaperaccess.com/full/187161.jpg")
+}
+
+h1{
+  background:blue;
+  background-size: auto;
+}
+
+div {
+  background: green;
+  border-color: black;
+  border-width: 3px;
+  border-style: double;
+  /* internal from border */
+  padding: 8px 8px 8px 15px;
+  /* external from border */
+  margin: 10px;
+
+}
+
+span{
+
+  background: orange;
+}
+
+
+.div1 {
+
+  background-image: linear-gradient(to left,yellow,orange);
+  border-width: 5px;
+  border-style: solid;
+  border-color: white;
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bold;
+  color:#6e316e;
+
+}
+
+
+#p1 {
+
+  color: white
+}
+
+/* Below selector selects all the p elements after the or ordered list.
+
+for more ref : https://www.w3schools.com/cssref/css_selectors.asp */
+ul + p{
+  color:blue
+
+}
+
+/* Below selector will select all the assendant of ordered list
+inside div1 */
+
+.div1 ol{
+
+  color: white;
+}
+/* Below selector selects the anchor tag with "href"
+attribute value "www.google.com" inside the div1 class.
+other anchor tags with this tag remains unaffected. */
+.div1 a[href="www.google.com"]{
+  color: red;
+}
+
+/* a:hover,a:visted etc are called pseudo class selectors  */
+.div1 a[href="www.google.com"]:hover{
+  color: grey;
+}
+ol{
+
+  color: orange;
+}
+
+a:hover{
+
+  color: pink
+}
+
+a:visited{
+  color: grey
+
+}

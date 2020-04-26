@@ -1,0 +1,152 @@
+/* useful
+https://www.youtube.com/watch?v=8x1mO1d6-4w */
+
+
+body {
+
+background: black;
+color: white;
+text-align: center;
+
+}
+
+
+.menu{
+
+border-width: 5px;
+border-style: solid;
+border-color:black;
+border-radius: 15px;
+width: 70%;
+height: 45px;
+margin: auto;
+padding: auto;
+background-color: black;
+position: relative;
+
+}
+
+a {
+
+  color: white;
+}
+.inside1{
+
+border: 3px solid white;
+margin: 10px 10px 10px 10px;
+border-radius: 10px;
+background-size: cover;
+background-color: green;
+width:17%;
+padding: auto;
+position: absolute;
+text-align: center;
+left:0%;
+
+}
+
+.inside1:hover{
+  background-image: url("https://wallpapersmug.com/large/71a9f6/colorful-squares-small-abstract.jpg");
+
+}
+
+
+.inside2{
+
+border: 3px solid white;
+margin: 10px 10px 10px 10px;
+border-radius: 10px;
+background-size: cover;
+background-color: green;
+width:17%;
+position: absolute;
+text-align: center;
+color: white;
+left: 19%;
+}
+
+.inside2:hover{
+  background-image: url("https://wallpapersmug.com/large/71a9f6/colorful-squares-small-abstract.jpg");
+
+}
+
+.inside3{
+
+border: 3px solid white;
+margin: 10px 10px 10px 10px;
+border-radius: 10px;
+background-size: cover;
+background-color: green;
+width:17%;
+position: absolute;
+text-align: center;
+color: white;
+left:38%;
+}
+
+.inside3:hover{
+  background-image: url("https://wallpapersmug.com/large/71a9f6/colorful-squares-small-abstract.jpg");
+
+}
+
+.inside4{
+
+border: 3px solid white;
+margin: 10px 10px 10px 10px;
+border-radius: 10px;
+background-size: cover;
+background-color: green;
+width:17%;
+position: absolute;
+text-align: center;
+color: white;
+left: 57%
+}
+
+.inside4:hover{
+  background-image: url("https://wallpapersmug.com/large/71a9f6/colorful-squares-small-abstract.jpg");
+
+}
+
+
+
+.sel1{
+
+border:3px solid white;
+margin: 10px 10px 10px 10px;
+border-radius: 10px;
+background-size: cover;
+background-color: green;
+width:17%;
+position: absolute;
+text-align: center;
+color: white;
+left: 76%;
+top:3%;
+
+}
+
+.sel1:hover{
+  background-image: url("https://wallpapersmug.com/large/71a9f6/colorful-squares-small-abstract.jpg");
+
+}
+
+
+/* .inside5 a{
+text-align:left;
+border: 2px solid;
+border-top-color: white;
+border-left-color:red;
+border-right-color:red;
+border-bottom-color:white;
+border-radius: 10px;
+background-image:linear-gradient(yellow,red);
+padding: 5px 10px 5px 10px;
+text-align: left;
+
+
+}
+
+.inside5 a:hover{
+  background-image:linear-gradient(red,yellow);
+} */

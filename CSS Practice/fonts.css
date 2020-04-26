@@ -1,0 +1,30 @@
+/* By default 1 em = 16 px in browser.
+If you declare the font size of body some where in the
+code and then you are writing the font size as "x em" then 1 em = the earlier declared font size.
+used to relate that with the earlier font size . */
+
+/* -----Website to check fonts compatibility in windows/Linux-----
+https://www.cssfontstack.com/ */
+
+body{
+  /* Below is font library font which css is linked */
+     font-family: 'DashleyRegular';
+     font-weight: normal;
+     font-style: normal;
+}
+
+#para1{
+/* Some font don't support in all OS. It's a font available is local sys */
+  font-family: cursive;
+  font-size: 1em;
+}
+
+#para2{
+
+  /* below font is linked from google fonts */
+  font-family: 'Teko', sans-serif;
+  font-size: 1.5em;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+}

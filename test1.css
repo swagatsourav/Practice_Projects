@@ -1,0 +1,120 @@
+
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+}
+    /* .parent{
+      background: #595758;
+      background-color: center;
+      margin:2%;
+      width:90%;
+      border-radius: 20px;
+      padding:4px;
+      height: 900px;
+    } */
+    .parent_list_div{
+      display: inline-block;
+      background: black;
+      padding:5px;
+      margin:10px;
+      border-radius: 5px;
+      color:white;
+    }
+
+    .parent_list_div ul{
+      /* display: inline-block; */
+      list-style-type:none;
+      color:white;
+      }
+
+
+      .parent_list_div ul li{
+        padding: 10px 20px;
+        margin: 5px;
+        text-align:center;
+
+      }
+
+      .parent_list_div ul li a{
+        text-decoration: none;
+        color:white;
+      }
+
+      .parent_list_div ul li:hover{
+        background:orange;
+        text-align:left;
+        border-radius:5px;
+
+      }
+
+      .sub-menu-2{
+
+        display: none;
+      }
+      .sub-menu-1{
+
+        display: none;
+      }
+
+      .parent_list_div ul li.headings1:hover .sub-menu-1{
+
+        display:block;
+        position: absolute;
+        background: black;
+        margin-left: 59px;
+        margin-top: -32px;
+        border-radius: 10px;
+
+      }
+
+      li.headings2:hover .sub-menu-2{
+
+        display:block;
+        position: absolute;
+        background: black;
+        margin-left: 75px;
+        margin-top: -30px;
+        border-radius: 10px;
+      }
+
+      /* ul li{
+        border-radius:4px;
+        text-decoration: none;
+        padding:10% 15%;
+        margin:10px;
+        } */
+
+      /* ul li a{
+        font-size: 2vw;
+        font-weight: bold;
+        color:white;
+        text-decoration: none;
+        padding:10px 15px;
+
+      } */
+
+      /* ul li a:hover{
+        text-decoration: none;
+        background-color: orange;
+        padding:10px 15px;
+        border-radius: 4px;
+
+
+      } */
+
+
+      /* #key3:hover ul li#in1key3 ul {
+
+        display:none;
+
+      } */
+
+      /* #key3:hover ul {
+        display:inline-block;
+        background: #595758;
+        position:absolute;
+        margin-left: 10%;
+
+      } */

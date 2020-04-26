@@ -1,0 +1,15 @@
+table{
+  /* width: 5  0%;
+  height:180px; */
+  margin: auto;
+
+}
+
+td {
+  border: 5px solid black;
+  height: 150px;
+  width:  150px;
+  text-align: center;
+  font-size: 80px;
+
+}
