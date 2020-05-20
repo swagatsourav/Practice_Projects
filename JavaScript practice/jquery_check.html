@@ -1,0 +1,31 @@
+<!-- To create a custom function( effect or event ) in jquery : -->
+<!-- ------------------------------------------------ -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="my_selected">
+    <div class="element">
+        test
+    </div>
+    </div>
+  </body>
+</html>
+
+
+<script type="text/javascript">
+(function( $ ){
+  $.fn.myCustomFunction= function() {
+
+    alert($(this).html())
+
+  };
+})( jQuery );
+
+$(".my_selected .element").myCustomFunction();
+
+</script>
