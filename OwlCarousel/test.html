@@ -49,6 +49,7 @@
   <body>
     <section id="demo" class="py5 bg-warning">
       <div class="container-fluid">
+        <button type="button" class="btn btn-light">Togle Carousel</button>
         <h1>Slider-Demo</h1>
         <div class="row">
           <div id="car1" class="owl-carousel owl-theme">
@@ -95,27 +96,30 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> -->
     <script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
     <script>
-      $(".owl-carousel").owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        autoplay: true,
-        autoplayHoverPause: true,
-        responsive: {
-          0: {
-            items: 1,
+      function carOn() {
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: true,
+          autoplay: true,
+          autoplayHoverPause: true,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            600: {
+              items: 2,
+            },
+            800: {
+              items: 3,
+            },
+            1000: {
+              items: 4,
+            },
           },
-          600: {
-            items: 2,
-          },
-          800: {
-            items: 3,
-          },
-          1000: {
-            items: 4,
-          },
-        },
-      });
+        });
+      }
+      $("button").click(function () {});
     </script>
   </body>
 </html>
