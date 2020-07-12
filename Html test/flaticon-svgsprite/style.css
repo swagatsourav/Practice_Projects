@@ -1,0 +1,36 @@
+.parent .child1 i {
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+    text-align: center;
+    line-height: 120px;
+    background: rgba(215, 216, 215, 0.4);
+    font-size: 80px;
+    border-radius: 50%;
+
+}
+
+.child1 i:before{ 
+    margin-left: 0;
+    font-size: 80px;
+    background: -webkit-linear-gradient(red,blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+.icon{
+
+     width: 120px;
+}
+
+
+.logo{
+
+    width:120px;
+}
+
+.child1 .col-4{
+    text-align: center;    
+}
+/* https://www.youtube.com/watch?v=BfrMtswcCbA&list=PLYSxOt29XdhG-9WsCpUNPCnkDJJwKR1eB */
