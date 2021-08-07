@@ -1,0 +1,60 @@
+- hosts: all
+  vars:
+  - rhel_dvd_path: "/dvd3"
+  - doc_root: "/var/www/html/swagat"
+  - http_port: 8080
+  tasks:
+  - file:
+      state: directory
+      path: "{{ rhel_dvd_path }}"
+
+  - mount:
+      src: "/dev/sr1"
+      path: "{{ rhel_dvd_path }}"
+      state: mounted
+      fstype: "iso9660"
+
+  - yum_repository:
+      baseurl: "{{ rhel_dvd_path }}/AppStream"
+      name: "mydvd1"
+      description: "myyumdvd1 for package"
+      gpgcheck: no
+
+  - yum_repository:
+      baseurl: "{{ rhel_dvd_path }}/BaseOS"
+      name: "mydvd2"
+      description: "myyumdvd2 for package"
+      gpgcheck: no
+
+  - package: 
+      name: "httpd"
+      state: present
+
+  - name: "custom configuration file"
+    template: 
+      dest: "/etc/httpd/conf.d/httpd.conf"
+      src: "httpd.conf"
+
+  - name: "Creating custom document root"
+    file:
+      state: directory
+      path: "{{ doc_root }}" 
+  
+  - name: "Adding content to document root"
+    copy:
+      dest: "{{ doc_root }}/index.html"
+      content: "This is mysite on 18/02/2021"
+
+  - service:
+      name: "httpd"
+      state: restarted
+      enabled: yes
+
+  - firewalld:
+      port: "8080/tcp"
+      state: enabled
+      permanent: yes
+      immediate: yes
+
+  - debug:
+      msg: "{{ rhel_dvd_path }} and {{ doc_root }}"

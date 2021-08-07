@@ -1,0 +1,50 @@
+- hosts: all
+  tasks:
+  - file:
+      state: directory
+      path: "/dvd1"
+
+  - mount:
+      src: "/dev/sr1"
+      path: "/dvd1"
+      state: mounted
+      fstype: "iso9660"
+
+  - yum_repository:
+      baseurl: "/dvd1/AppStream"
+      name: "mydvd1"
+      description: "myyumdvd1 for package"
+      gpgcheck: no
+
+  - yum_repository:
+      baseurl: "/dvd1/BaseOS"
+      name: "mydvd2"
+      description: "myyumdvd2 for package"
+      gpgcheck: no
+
+  - package: 
+      name: "httpd"
+      state: present
+
+  - copy: 
+      dest: "/etc/httpd/conf.d/httpd.conf"
+      src: "httpd.conf"
+
+  - file:
+      state: directory
+      path: "/var/www/html/Swagat" 
+  
+  - copy:
+      dest: "/var/www/html/Swagat/index.html"
+      content: "This is mysite on 14/02/2021"
+
+  - service:
+      name: "httpd"
+      state: restarted
+      enabled: yes
+
+  - firewalld:
+      port: "8080/tcp"
+      state: enabled
+      permanent: yes
+      immediate: yes

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+//1. toggle() with boolean parameter .
+
+$("#test_id").toggle()
+  $("button").click(function () { 
+
+    $("#test_id").toggle(true);
+    // when "true" inside toggle(), it behaves as show() method.and for "false" behaves as hide() method
+  });
+  
+// 2.filter() method
+
+$("#myInput_2").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#filter_2 li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+
+// In this above case the filter() method runs on the element list's each element.
+//  If there is any return statement inside the function , then the filter() function returns
+//  all the elements for which the return value is true. If there is no return statement inside
+//  the filter() function. Then it simply runs for all the elements inside the element list on which the filter function runs .
+
+
+});
+</script>
+</head>
+<body>
+
+<!-- ############   1. toogle("boolean value") -->
+
+
+<h2>1. toogle("boolean value")</h2>
+<div id="test_id" style="width:80px;height:80px;background-color:pink;">This is a test block</div>
+<button id="second_btn">Click Me to toggle</button>
+
+<!-- ###########    2.filter() method< -->
+
+<h2>2.filter() method</h2>
+
+<p>Type something in the input field to search the list for specific items:</p>  
+<input id="myInput_2" type="text" placeholder="Search..">
+<br>
+<ul id="filter_2">
+  <li>First item</li>
+  <li>Second item</li>
+  <li>Third item</li>
+  <li>Fourth</li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <style>
+/* body{
+    margin: 0px;
+    width: 100%;
+  } */
+    
+    .child2 img{
+
+      width:100%;
+      height: auto;
+
+    }
+
+    #test{
+
+      display: none;
+      width:100px;
+      height:100px;
+      background: yellow;
+
+    }
+
+    </style>
+
+</head>
+  <body>
+
+    <div id="test">
+
+    </div>
+
+    <div id="parent" class="container">      
+      <div class="page-1" style="display:none;" >
+        <div class="row child1">
+            <div class="col-lg-6 child2">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, deserunt dolor? Deleniti quidem esse illum reiciendis voluptatibus quas similique, distinctio officiis nobis dolor eius harum accusantium repudiandae facilis ex! Fuga.</p>
+            </div>
+
+            <div class="col-lg-6 child2">
+              <img src="https://www.gstatic.com/webp/gallery3/3.png" alt="">
+            </div>
+          </div>
+      </div>
+
+      <div class="page-2" style="display:none;" >
+          <div class="row child1">
+          <div class="col-lg-6 child2">
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, deserunt dolor? Deleniti quidem esse illum reiciendis voluptatibus quas similique, distinctio officiis nobis dolor eius harum accusantium repudiandae facilis ex! Fuga.</p>
+           </div>
+
+           <div class="col-lg-6 child2">
+             <img src="https://www.gstatic.com/webp/gallery3/5_webp_ll.png" alt="">
+           </div>
+          </div>
+      </div>
+
+     <div class="page-3" style="display:none;" >
+      <div class="row child1">
+          <div class="col-lg-6 child2">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, deserunt dolor? Deleniti quidem esse illum reiciendis voluptatibus quas similique, distinctio officiis nobis dolor eius harum accusantium repudiandae facilis ex! Fuga.</p>
+          </div>
+
+          <div class="col-lg-6 child2">
+            <img src="https://www.gstatic.com/webp/gallery3/2_webp_ll.png" alt="">
+          </div>
+      </div>
+     </div>
+
+     <nav aria-label="Pageination">
+      <ul class="pagination">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+        </li>
+        <li id="item-1" class="page-item"><a class="page-link" href="#">1</a></li>
+        <li id="item-2" class="page-item active" aria-current="page">
+          <a class="page-link" href="#">2</a>
+        </li>
+        <li id="item-3" class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button id="btn">Click me</button>
+
+  </div>
+      
+  
+<button>Click to fade in boxes</button><br><br>
+<a>Click me</a>
+
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <script>
+
+      $( document ).ready(function() {
+          
+        $( "#parent nav #item-1 a" ).click(function() {
+          
+          // alert("hi");
+          $("#parent .page-1").show().siblings("div").hide();
+         
+
+        });
+
+        $( "#parent nav #item-2 a" ).click(function() {
+          
+          // alert("hi");
+          $("#parent .page-2").show().siblings("div").hide();
+
+        });
+
+        $( "#parent nav #item-3 a" ).click(function() {
+          
+          // alert("hi");
+          $("#parent .page-3").show().siblings("div").hide();
+
+        });
+
+        $("#btn").click(function () { 
+          $("#test").fadeToggle();
+        });
+
+        $("button").click(function(){
+    $("#div1").fadeIn();
+    $("#div2").fadeIn("slow");
+    $("#div3").fadeIn(3000);
+  });
+
+  $("button").click(function(){
+    $("#div1").fadeIn();
+    $("#div2").fadeIn("slow");
+    $("#div3").fadeIn(3000);
+  });
+
+  $("a").click(function () { 
+    $("#div1").slideToggle(1000);
+    $("#div2").slideToggle(1500);
+    $("#div3").slideToggle(2000);
+  });
+
+      });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+---
+- hosts: localhost
+  vars_files:
+    - mail_cred.yml
+  tasks:
+    - mail: 
+        host: smtp.gmail.com
+        port: 587
+        username: "{{ u }}"
+        password: "{{ p }}"
+        to: swagat.miku@gmail.com
+        subject: Ansible-report
+        body: 'System has been successfully provisioned.' 
+
+...
+
+
+---
+- hosts: localhost
+  tasks:
+  - command: "ls /test_dir"
+    register: x
+    ignore_errors: yes
+  - debug:
+      var: x
+  - command: "mkdir /test_dir"
+    when: x.rc != 0
+      
+...
+
+- name: "Installing httpd"
+  package:
+    name: "httpd"
+    state: present
+
