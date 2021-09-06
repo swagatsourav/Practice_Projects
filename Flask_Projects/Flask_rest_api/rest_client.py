@@ -1,0 +1,25 @@
+import requests
+base = 'http://127.0.0.1:5000/'
+data = {"name":"Rang De Basanti","star":"Amir khan","Movie":"ddfd","status":"hit"}
+new_data = {}
+# r = requests.get(base + 'helloworld/Swagat/29')
+# p = requests.post(base + 'helloworld')
+# q = requests.put(base + 'update/2', data)
+# s = requests.put(base + "video/1",{"likes":10,"name":"swagat","views":30})
+# k = requests.get(base + "video/2")
+k = requests.post(base + "video/2",{"likes":10,"name":"swagat","views":30})
+print(k.json())
+input()
+k = requests.post(base + "video/3",{"likes":10,"name":"rani","views":20})
+print(k.json())
+input()
+d = requests.delete(base + "video/2")
+print(d)
+input()
+k = requests.get(base + "video/2")
+print(k.json())
+k = requests.get(base + "video/3")
+print(k.json())
+# print(r.json())
+# print(s.json())
+# input()
